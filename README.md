@@ -25,3 +25,5 @@
   
   - Manejo de APIs
   - Manejo de fetch
+  - Manejo de custom hooks
+  - testing
