@@ -20,3 +20,8 @@
  Ejercicio 3 - Mouse Follower  
 
  - Manejo de useEffect
+
+  Ejercicio 4 - Prueba Tecnica React Jr/Trainee  
+  
+  - Manejo de APIs
+  - Manejo de fetch
