@@ -13,6 +13,10 @@ const FollowMouse = () => {
     if (enabled) {
       window.addEventListener("pointermove", handleMove);
     }
+    return () => {
+      console.log("cleanup");
+      window.removeEventListener("pointermove", handleMove);
+    };
   });
   return (
     <>
