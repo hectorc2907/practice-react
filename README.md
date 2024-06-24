@@ -17,3 +17,6 @@
  - Eventos  
  - LocalStorage  
  
+ Ejercicio 3 - Mouse Follower  
+
+ - Manejo de useEffect
