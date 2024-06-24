@@ -46,6 +46,11 @@ export function App() {
     }
     return null;
   };
+  const resetGame = () => {
+    setBoard(Array(9).fill(null));
+    setTurn(TURNS.X);
+    setWinner(null);
+  };
   const updateBoard = (index) => {
     if (board[index] || winner) return;
 
@@ -64,6 +69,7 @@ export function App() {
   return (
     <main className="board">
       <h1>Tic Tac Toe</h1>
+      <button onClick={resetGame}>Reset del juego</button>
       <section className="game">
         {board.map((_, index) => {
           return (
@@ -85,7 +91,7 @@ export function App() {
               {winner && <Square>{winner}</Square>}
             </header>
             <footer>
-              <button>Empezar de Nuevo</button>
+              <button onClick={resetGame}>Empezar de Nuevo</button>
             </footer>
           </div>
         </section>
