@@ -7,3 +7,9 @@ APIs:
 Recupera un hecho aleatorio de gatos de la primera API 
 y muestra una imagen de un gato con la primera palara 
 del hecho recuperado usando la segunda API.
+
+Separando consignas en partes
+
+- Recupera un hecho aleatorio de gatos de la primera API
+- Recuperar la primera palabra del hecho
+- Muestra una imagen de un gato con la primera palabra
