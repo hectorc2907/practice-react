@@ -1,10 +1,10 @@
 import "./App.css";
-import responseMovies from "./mocks/with-results.json";
-import withoutResult from "./mocks/no-result.json";
 import { Movies } from "./components/Movies";
+import { useMovies } from "./hooks/useMovies";
 
 export function App() {
-  const movies = responseMovies.Search;
+  const { movies: mappedMovies } = useMovies();
+
   return (
     <div className="page">
       <header>
@@ -15,7 +15,7 @@ export function App() {
         </form>
       </header>
       <main>
-        <Movies movies={movies}/>
+        <Movies movies={mappedMovies} />
       </main>
     </div>
   );
