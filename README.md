@@ -22,7 +22,8 @@
  - Manejo de useEffect
 
   Ejercicio 4 - Prueba Tecnica React Jr/Trainee  
-  
+
+  - Configuracion del Punto de Entrada desde 0  
   - Manejo de APIs
   - Manejo de fetch
   - Manejo de custom hooks
