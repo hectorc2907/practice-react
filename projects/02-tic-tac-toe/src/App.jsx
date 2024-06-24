@@ -68,7 +68,7 @@ export function App() {
         {board.map((_, index) => {
           return (
             <Square key={index} index={index} updateBoard={updateBoard}>
-              {_}
+              {board[index]}
             </Square>
           );
         })}
@@ -77,6 +77,19 @@ export function App() {
         <Square isSelected={turn === TURNS.X}>{TURNS.X}</Square>
         <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square>
       </section>
+      {winner !== null && (
+        <section className="winner">
+          <div className="text">
+            <h2>{winner == false ? "Empate" : "Ganó:"}</h2>
+            <header className="win">
+              {winner && <Square>{winner}</Square>}
+            </header>
+            <footer>
+              <button>Empezar de Nuevo</button>
+            </footer>
+          </div>
+        </section>
+      )}
     </main>
   );
 }
