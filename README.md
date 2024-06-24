@@ -28,3 +28,10 @@
   - Manejo de fetch
   - Manejo de custom hooks
   - Testing con Playwright
+
+ Ejercicio 5 - Buscador de Peliculas
+
+  - Manejo de useRef
+  - Manejo de useMemo
+  - Manejo de useCallback
+  - Creacion de custom hooks
