@@ -22,6 +22,8 @@ export function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(TURNS.X);
   const updateBoard = (index) => {
+    if (board[index]) return;
+
     const newBoard = [...board];
     newBoard[index] = turn;
     setBoard(newBoard);
@@ -35,11 +37,9 @@ export function App() {
       <section className="game">
         {board.map((_, index) => {
           return (
-            <Square
-              key={index}
-              index={index}
-              updateBoard={updateBoard}
-            >{_}</Square>
+            <Square key={index} index={index} updateBoard={updateBoard}>
+              {_}
+            </Square>
           );
         })}
       </section>
