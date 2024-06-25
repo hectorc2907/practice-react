@@ -35,3 +35,10 @@
   - Manejo de useMemo
   - Manejo de useCallback
   - Creacion de custom hooks
+
+Ejercicio 6 - Carrito de Compras
+
+  - Creacion de Estados Globales
+  - Manejo de useContext
+  - Manejo de useReducer
+  - Manejo de useId
