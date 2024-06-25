@@ -16,17 +16,17 @@ function useSearch() {
 
     if (search === "") {
       setError("No se puede buscar una pelicula vacia");
-      return
+      return;
     }
 
     if (search.match(/^\d+$/)) {
       setError("No se puede buscar una pelicula con un numero");
-      return
+      return;
     }
 
     if (search.length < 3) {
       setError("La busqueda debe tener al menos 3 caracteres");
-      return
+      return;
     }
 
     setError(null);
@@ -36,12 +36,12 @@ function useSearch() {
 }
 
 export function App() {
-  const { movies } = useMovies();
   const { search, updateSearch, error } = useSearch();
+  const { movies, getMovies } = useMovies({search});
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log({ search });
+    getMovies();
   };
 
   const handleChange = (event) => {
