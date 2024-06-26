@@ -47,3 +47,8 @@ Ejercicio 7 - Midu Router
 
   - Generamos nuestro propio react router
   - Manejo de Lazy y Suspense
+
+Ejercicio 8 - Clon Google Translate
+
+  - TypeScript en React
+  - APIs
