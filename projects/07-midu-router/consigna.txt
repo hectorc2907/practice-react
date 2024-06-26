@@ -1,0 +1,12 @@
+React Router desde cero
+
+- [] Crea una forma de hacer SPAs
+- [] Poder navergar entre paginas con el boton de atras
+- [] Crear componente Link para hacerlo declarativo
+- [] Crear componente Router para hacerlo mas declarativo
+- [] Soportar ruta por defecto (404)
+- [] Soportar rutas con parametros
+- [] componente <Route/> para hacerlo declarativo
+- [] Lazy Loading de las rutas
+- [] Testing
+- [] Publicar el paquete en NPM
