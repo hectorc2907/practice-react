@@ -1,6 +1,7 @@
 import "./App.css";
 import HomePage from "./pages/Home";
 import AboutPage from "./pages/About";
+import Page404 from './pages/404'
 import { Router } from "./components/Router";
 
 const appRoutes = [
@@ -18,7 +19,7 @@ function App() {
   return (
     <main>
       <div>Midu Router</div>
-      <Router routes={appRoutes} />
+      <Router routes={appRoutes} defaultComponent={Page404}/>
     </main>
   );
 }
