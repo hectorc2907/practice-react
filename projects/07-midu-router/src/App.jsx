@@ -21,7 +21,7 @@ const appRoutes = [
 function App() {
   return (
     <main>
-      <div>Midu Router</div>
+      <div>Hector Router</div>
       <Suspense fallback={null}>
         <Router routes={appRoutes} defaultComponent={Page404}>
           <Route path="/" Component={LazyHomePage} />
