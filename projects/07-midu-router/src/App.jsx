@@ -1,12 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
+
+const NAVIGATION_EVENT = "pushstate";
+
+function navigate(href) {
+  window.history.pushState({}, "", href);
+  const navigationEvent = new Event("pushstate");
+  window.dispatchEvent(navigationEvent);
+}
 
 function HomePage() {
   return (
     <div>
       <h1>Home</h1>
       <p>Esta es una pagina de ejemplo para crear un React Router</p>
-      <a href="/about">Sobre Nosotros</a>
+      <button onClick={() => navigate("/about")}>Sobre Nosotros</button>
     </div>
   );
 }
@@ -22,13 +30,25 @@ function AboutPage() {
         />
         <p>Hola!, estoy creando un React Router desde cero</p>
       </div>
-      <a href="/">Home</a>
+      <button onClick={() => navigate("/")}>Home</button>
     </div>
   );
 }
 
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
+
+  useEffect(() => {
+    const onLocationChange = () => {
+      setCurrentPath(window.location.pathname);
+    };
+    window.addEventListener(NAVIGATION_EVENT, onLocationChange);
+
+    return () => {
+      window.removeEventListener(NAVIGATION_EVENT, onLocationChange);
+    };
+  }, []);
+
   return (
     <main>
       <div>Midu Router</div>
