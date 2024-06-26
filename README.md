@@ -42,3 +42,7 @@ Ejercicio 6 - Carrito de Compras
   - Manejo de useContext
   - Manejo de useReducer
   - Manejo de useId
+
+Ejercicio 7 - Midu Router
+
+  - Generamos nuestro propio react router
