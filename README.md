@@ -46,3 +46,4 @@ Ejercicio 6 - Carrito de Compras
 Ejercicio 7 - Midu Router
 
   - Generamos nuestro propio react router
+  - Manejo de Lazy y Suspense
