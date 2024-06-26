@@ -1,4 +1,4 @@
-import { navigate } from "../App";
+import { Link } from "../components/Link";
 
 export default function AboutPage() {
   return (
@@ -11,7 +11,7 @@ export default function AboutPage() {
         />
         <p>Hola!, estoy creando un React Router desde cero</p>
       </div>
-      <button onClick={() => navigate("/")}>Home</button>
+      <Link to="/">Home</Link>
     </div>
   );
 }
