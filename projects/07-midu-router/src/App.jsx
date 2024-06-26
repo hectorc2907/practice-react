@@ -1,37 +1,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { EVENTS } from "./utils/const";
+import HomePage from "./pages/Home";
+import AboutPage from "./pages/About";
 
-function navigate(href) {
+export function navigate(href) {
   window.history.pushState({}, "", href);
   const navigationEvent = new Event(EVENTS.PUSHSTATE);
   window.dispatchEvent(navigationEvent);
-}
-
-function HomePage() {
-  return (
-    <div>
-      <h1>Home</h1>
-      <p>Esta es una pagina de ejemplo para crear un React Router</p>
-      <button onClick={() => navigate("/about")}>Sobre Nosotros</button>
-    </div>
-  );
-}
-
-function AboutPage() {
-  return (
-    <div>
-      <h1>About</h1>
-      <div>
-        <img
-          src="https://pbs.twimg.com/profile_images/1805291672273575936/IlcQEzur_400x400.jpg"
-          alt="mi foto"
-        />
-        <p>Hola!, estoy creando un React Router desde cero</p>
-      </div>
-      <button onClick={() => navigate("/")}>Home</button>
-    </div>
-  );
 }
 
 function App() {
