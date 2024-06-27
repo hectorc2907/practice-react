@@ -2,7 +2,7 @@ import { Copyright } from "./components/Copyright";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Todos } from "./components/Todos";
-import { useTodos } from "./hooks/useTodoFirst";
+import { useTodos } from "./hooks/useTodo";
 
 const App: React.FC = () => {
   const {
