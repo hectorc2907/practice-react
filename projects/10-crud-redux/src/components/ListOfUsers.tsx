@@ -40,7 +40,7 @@ export function ListOfUsers() {
     <Card>
       <Title>
         Usuarios
-        <Badge style={{ marginLeft: "8px" }}>Usuario</Badge>
+        <Badge style={{ marginLeft: "8px" }}>{users.length}</Badge>
       </Title>
       <Table>
         <TableHead>
