@@ -56,3 +56,10 @@ Ejercicio 9 - Clon Google Translate
 
   - TypeScript en React
   - APIs
+
+Ejercicio 10 - CRUD(Create, Read, Update, Delete)
+
+  - CRUD con TypeScript
+  - Manejo de Redux Toolkit
+  - Manejo de Rome Tools
+  - Manejo de Tremor
