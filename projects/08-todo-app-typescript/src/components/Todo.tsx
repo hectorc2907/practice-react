@@ -6,7 +6,7 @@ interface Props {
   completed: boolean;
   setCompleted: (id: string, completed: boolean) => void;
   setTitle: (params: { id: string; title: string }) => void;
-  isEditing: (completed: string) => void;
+  isEditing: string
   setIsEditing: (completed: string) => void;
   removeTodo: (id: string) => void;
 }
