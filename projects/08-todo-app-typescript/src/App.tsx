@@ -1,3 +1,4 @@
+import { Copyright } from "./components/Copyright";
 import { Header } from "./components/Header";
 import { Todos } from "./components/Todos";
 import { useTodos } from "./hooks/useTodoFirst";
@@ -21,6 +22,7 @@ const App: React.FC = () => {
           todos={filteredTodos}
         />
       </div>
+      <Copyright />
     </>
   );
 };
