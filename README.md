@@ -63,3 +63,8 @@ Ejercicio 10 - CRUD(Create, Read, Update, Delete)
   - Manejo de Redux Toolkit
   - Manejo de Rome Tools
   - Manejo de Tremor
+
+Ejercicio 11 - Prueba Tecnica React + TypeScript
+
+  - Utilizamos todas las cosas del curso
+  - Finalidad ver como son las pruebas tecnicas de grandes empresas, sueldo de 55K Euros al año
