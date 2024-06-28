@@ -72,3 +72,5 @@ Ejercicio 11 - Prueba Tecnica React + TypeScript
 Ejercicio 11b - Prueba Tecnica Implementando React Query
 
   - Implementamos React Query con el proyecto anterior
+  - Infinity Scroll
+  - Pagination
