@@ -46,7 +46,6 @@ function App() {
   }, []);
 
   const filteredUsers = useMemo(() => {
-    console.log("calculate filteredUsers");
     return filterCountry != null && filterCountry.length > 0
       ? users.filter((user) => {
           return user.location.country
@@ -57,7 +56,6 @@ function App() {
   }, [users, filterCountry]);
 
   const sortedUsers = useMemo(() => {
-    console.log("calculate sortedUsers");
     if (sorting === SortBy.NONE) return filteredUsers;
     const compareProperties: Record<string, (user: User) => any> = {
       [SortBy.COUNTRY]: (user) => user.location.country,
