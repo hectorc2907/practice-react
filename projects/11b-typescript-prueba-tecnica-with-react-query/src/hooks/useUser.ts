@@ -15,7 +15,7 @@ export const useUsers = () => {
     hasNextPage,
   } = useInfiniteQuery({
     queryKey: ["users"],
-    queryFn: ({ pageParam = 0 }) => fetchUsers({pageParam}),
+    queryFn: ({ pageParam = 0 }) => fetchUsers({ pageParam }),
     getNextPageParam: (lastPage) => lastPage.nextCursor,
     refetchOnWindowFocus: false,
     staleTime: 1000 * 3,
@@ -41,5 +41,6 @@ export const useUsers = () => {
     users,
     hasNextPage,
     deleteUser,
+    setUsers, // Export setUsers
   };
 };

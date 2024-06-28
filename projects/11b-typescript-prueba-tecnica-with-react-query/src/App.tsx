@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useRef } from "react";
 import "./App.css";
 import { UsersList } from "./components/UsersList";
 import { type User, SortBy } from "./types.d";
@@ -6,11 +6,24 @@ import { useUsers } from "./hooks/useUser";
 import { Results } from "./components/Results";
 
 function App() {
-  const { isLoading, isError, users, refetch, fetchNextPage, hasNextPage, deleteUser } =
-    useUsers();
+  const {
+    isLoading,
+    isError,
+    users,
+    fetchNextPage,
+    hasNextPage,
+    deleteUser,
+    refetch,
+  } = useUsers();
   const [showColors, setShowColors] = useState(false);
   const [sorting, setSorting] = useState<SortBy>(SortBy.NONE);
   const [filterCountry, setFilterCountry] = useState<string | null>(null);
+  const initialUsers = useRef<User[]>([]); // Referencia a los usuarios iniciales
+
+  // Actualizar la referencia a los usuarios iniciales cuando cambian los usuarios
+  useMemo(() => {
+    initialUsers.current = users;
+  }, [users]);
 
   const toggleColors = () => {
     setShowColors(!showColors);
@@ -23,7 +36,8 @@ function App() {
   };
 
   const handleReset = () => {
-    void refetch();
+    refetch();
+    setFilterCountry(null); // Resetear el filtro
   };
 
   const handleChangeSort = (sort: SortBy) => {
@@ -49,11 +63,12 @@ function App() {
       [SortBy.LAST]: (user) => user.name.last,
     };
 
-    return filteredUsers.toSorted((a, b) => {
+    return filteredUsers.sort((a, b) => {
       const extractProperty = compareProperties[sorting];
       return extractProperty(a).localeCompare(extractProperty(b));
     });
   }, [filteredUsers, sorting]);
+
   return (
     <div className="App">
       <h1>Lista de Usuarios</h1>
