@@ -68,3 +68,7 @@ Ejercicio 11 - Prueba Tecnica React + TypeScript
 
   - Utilizamos todas las cosas del curso
   - Finalidad ver como son las pruebas tecnicas de grandes empresas, sueldo de 55K Euros al año
+
+Ejercicio 11b - Prueba Tecnica Implementando React Query
+
+  - Implementamos React Query con el proyecto anterior
