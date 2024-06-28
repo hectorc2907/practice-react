@@ -6,10 +6,12 @@
 }
 
 .table--showColors tr:nth-child(odd) {
+  color: white;
   background: #333;
 }
 
 .table--showColors tr:nth-child(even) {
+  color: white;
   background: #555;
 }
 
