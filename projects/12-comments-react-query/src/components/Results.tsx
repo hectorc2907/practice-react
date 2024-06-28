@@ -1,6 +1,6 @@
 import { CommentWithId } from "../services/comments";
 
-export const Result = ({ data }: { data?: CommentWithId[] }) => {
+export const Results = ({ data }: { data?: CommentWithId[] }) => {
   return (
     <ul>
       <li>
