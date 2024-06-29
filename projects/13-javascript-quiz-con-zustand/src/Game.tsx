@@ -14,6 +14,20 @@ import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { type Question as QuestionType } from "./types";
 
 const Question = ({ info }: { info: QuestionType }) => {
+  const selectAnswer = useQuestionStore((state) => state.selectAnswer);
+  const createHandleClick = (answerIndex: number) => () => {
+    selectAnswer(info.id, answerIndex);
+  };
+  const getBackgroundColor = (index: number) => {
+    const { userSelectedAnswer, correctAnswer } = info;
+    if (userSelectedAnswer == null) return "transparent";
+    if (index !== correctAnswer && index !== userSelectedAnswer)
+      return "transparent";
+    if (index === correctAnswer) return "green";
+    if (index === userSelectedAnswer) return "red";
+
+    return "transparent";
+  };
   return (
     <Card
       variant="outlined"
@@ -26,7 +40,11 @@ const Question = ({ info }: { info: QuestionType }) => {
       <List sx={{ bgcolor: "#333" }} disablePadding>
         {info.answers.map((answer, index) => (
           <ListItem key={index} disablePadding divider>
-            <ListItemButton>
+            <ListItemButton
+              disabled={info.userSelectedAnswer != null}
+              onClick={createHandleClick(index)}
+              sx={{ backgroundColor: getBackgroundColor(index) }}
+            >
               <ListItemText primary={answer} sx={{ textAlign: "center" }} />
             </ListItemButton>
           </ListItem>
