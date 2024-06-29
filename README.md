@@ -74,3 +74,11 @@ Ejercicio 11b - Prueba Tecnica Implementando React Query
   - Implementamos React Query con el proyecto anterior
   - Infinity Scroll
   - Pagination
+
+Ejercicio 12 - Comentarios con ReactQuery
+
+  - Manejo de ReactQuery
+
+Ejercicio 13 - JavaScript Quizz
+
+  - Implementacion de Zustand como alternativa a Redux
