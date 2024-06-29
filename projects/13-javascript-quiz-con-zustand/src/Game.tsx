@@ -1,9 +1,13 @@
-// import { IconButton, Stack } from "@mui/material";
+import { Card, IconButton, Stack, Typography } from "@mui/material";
 import { useQuestionStore } from "./store/questions";
 import { type Question as QuestionType } from "./types";
 
 const Question = ({ info }: { info: QuestionType }) => {
-  return null;
+  return (
+    <Card variant="outlined">
+      <Typography variant="h5">{info.question}</Typography>
+    </Card>
+  );
 };
 
 export const Game = () => {
@@ -13,7 +17,7 @@ export const Game = () => {
   const questionInfo = questions[currentQuestion];
   return (
     <>
-      <Question info={questionInfo}/>
+      <Question info={questionInfo} />
     </>
   );
 };
