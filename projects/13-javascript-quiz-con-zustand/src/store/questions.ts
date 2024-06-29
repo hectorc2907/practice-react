@@ -60,6 +60,9 @@ export const useQuestionStore = create<State>()(
             set({ currentQuestion: previousQuestion });
           }
         },
+        reset: () => {
+          set({ currentQuestion: 0, questions: [] });
+        },
       };
     },
     {
