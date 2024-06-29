@@ -1,6 +1,5 @@
 import { Button } from "@mui/material";
 import { useQuestionData } from "./hooks/useQuestionsData";
-import { reset } from "canvas-confetti";
 import { useQuestionStore } from "./store/questions";
 
 export const Footer = () => {
