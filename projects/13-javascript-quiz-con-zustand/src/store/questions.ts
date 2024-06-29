@@ -13,6 +13,8 @@ interface State {
   reset: () => void;
 }
 
+const API_URL = import.meta.env.VITE_API_URL
+
 export const useQuestionStore = create<State>()(
   persist(
     (set, get) => {
@@ -20,7 +22,7 @@ export const useQuestionStore = create<State>()(
         questions: [],
         currentQuestion: 0,
         fetchQuestions: async (limit: number) => {
-          const res = await fetch("http://localhost:5173/data.json");
+          const res = await fetch(`${API_URL}/data.json`);
           const json = await res.json();
 
           const questions = json
